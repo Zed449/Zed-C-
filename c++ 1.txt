@@ -1,0 +1,15 @@
+
+int main() {
+    //----------
+    int a;
+    printf("Enter your Age:");
+    scanf("%d",&a);
+    printf("Your Age is:%d",a);
+    //----------
+        char b[100];
+        printf("\nEnter your Name:");
+        scanf("%s",&b);
+        printf("Name:%s",b);
+
+    return 0;
+}
