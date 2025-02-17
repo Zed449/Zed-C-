@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+void AskUserForBioData() {
+    char name[100];
+    char FathersName[3000];
+    char MothersName[2000];
+    char Sister1Name[2000];
+    char Sister2Name[2000];
+    int Age;
+    char batch[20];
+    char degree_program[10000];
+    int semester;
+
+    printf("\nEnter your name: ");
+    scanf("%s", name);  
+
+    printf("\nEnter Your Fathers Name: ");
+    scanf("%s", FathersName);
+    
+    printf("\nEnter Your Mother Name: ");
+    scanf("%s", MothersName);
+    
+    printf("\nEnter Your Sister1 Name: ");
+    scanf("%s", Sister1Name);
+    
+    printf("\nEnter Your Sister2 Name: ");
+    scanf("%s", Sister2Name);
+
+    printf("\nEnter Your Age: ");
+    scanf("%d", &Age);
+
+    printf("\nYour Batch: ");
+    scanf("%s", batch);
+
+    printf("\nEnter Your Degree Name: ");
+    scanf("%s", degree_program);
+
+    printf("\nYour Semester No: ");
+    scanf("%d", &semester);
+    
+    printf("\nName: %s\nFather's Name: %s\nMother's Name: %s\nSister1 Name: %s\nSister2 Name: %s\nAge: %d\nBatch: %s\nDegree Program: %s\nSemester: %d\n",
+           name, FathersName, MothersName, Sister1Name, Sister2Name, Age, batch, degree_program, semester);
+}
+
+int main() {
+    AskUserForBioData();
+    return 0;
+}
