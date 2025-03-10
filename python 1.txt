@@ -1,0 +1,4 @@
+def  askuserforbiodata():
+  data=input("enter your Name, Fathername, Age, Semester, Batch")
+  Name, Fathername, Age, Semester, Batch = data.split(',')
+  print(Name, Fathername, Age, Semester, Batch)
