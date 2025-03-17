@@ -1,0 +1,70 @@
+#include <iostream>
+using namespace std;
+
+// Function declarations
+void add(float num1, float num2);
+void subtract(float num1, float num2);
+void multiply(float num1, float num2);
+void divide(float num1, float num2);
+void handle_error();
+
+int main() {
+    float num1, num2;
+    char operatorSymbol;
+
+    
+    cout << "Enter first number: ";
+    cin >> num1;
+
+    cout << "Enter an operator (+, -, *, /): ";
+    cin >> operatorSymbol;
+
+    cout << "Enter second number: ";
+    cin >> num2;
+
+    
+    if (operatorSymbol == '+') {
+        add(num1, num2);
+    }
+    else if (operatorSymbol == '-') {
+        subtract(num1, num2);
+    }
+    else if (operatorSymbol == '*') {
+        multiply(num1, num2);
+    }
+    else if (operatorSymbol == '/') {
+        if (num2 == 0) {
+            handle_error();  
+        } else {
+            divide(num1, num2);
+        }
+    } 
+    else {
+        handle_error();  
+    }
+
+    return 0;
+}
+
+
+
+void add(float num1, float num2) {
+    cout << "Result: " << num1 + num2 << endl;
+}
+
+void subtract(float num1, float num2) {
+    cout << "Result: " << num1 - num2 << endl;
+}
+
+void multiply(float num1, float num2) {
+    cout << "Result: " << num1 * num2 << endl;
+}
+
+void divide(float num1, float num2) {
+    cout << "Result: " << num1 / num2 << endl;
+}
+
+
+void handle_error() {
+    cout << "Error: Invalid operator or division by zero.\n";
+}
