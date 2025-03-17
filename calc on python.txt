@@ -1,0 +1,34 @@
+
+def add(num1, num2):
+    print("Result:", num1 + num2)
+
+def subtract(num1, num2):
+    print("Result:", num1 - num2)
+
+def multiply(num1, num2):
+    print("Result:", num1 * num2)
+
+def divide(num1, num2):
+    if num2 == 0:
+        handle_error()
+    else:
+        print("Result:", num1 / num2)
+
+def handle_error():
+    print("Error: Invalid operator or division by zero.")
+
+# Main program
+num1 = float(input("Enter first number: "))
+operator_symbol = input("Enter an operator (+, -, *, /): ")
+num2 = float(input("Enter second number: "))
+
+if operator_symbol == '+':
+    add(num1, num2)
+elif operator_symbol == '-':
+    subtract(num1, num2)
+elif operator_symbol == '*':
+    multiply(num1, num2)
+elif operator_symbol == '/':
+    divide(num1, num2)
+else:
+    handle_error()
